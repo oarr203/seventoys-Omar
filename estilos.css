@@ -425,9 +425,7 @@ h2{
     .coches, .figuras{
         grid-template-rows: 300px 300px 300px 300px;
     }
-
 }
-
 @media only screen and (max-width: 742px){
     .coches, .figuras{
         /*background-color: blueviolet;*/
