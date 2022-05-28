@@ -41,10 +41,14 @@ body{
     border-radius: 50%;
     margin-top: 1.5%;
     margin-left: 1.5%;
-    z-index: 10;
-   
+    z-index: 10; 
 }
-.logo{
+.logobs{
+    width:70px; 
+    height:70px ;
+    border-radius: 50%;
+}
+.logobs{
     animation: rotation 7s infinite linear;
 }
 @keyframes rotation{
@@ -54,7 +58,13 @@ body{
     to{
         transform: rotatey(360deg);
     }
-
+}
+.navbar{
+    background-color:rgb(204, 17, 17) ;
+}
+.narvarcolapsebs {
+    justify-content: right;
+    font-weight: bold;
 }
 .menu{
     color: white;
@@ -77,6 +87,27 @@ body{
     background-size: cover;
     background-position: center;
 }
+.portadas{
+    /*border: solid 2px green;*/
+    background-color:black;
+}
+.portadas img{
+    width: 74%;
+    background-color: aqua;
+    margin-left: 13%;
+    height: 20%;
+}
+.indicadores li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:rgb(204, 17, 17)  
+}
+.portadas p, .portadas h3{
+    color:rgb(204, 17, 17);
+    
+}
+
 /*.imagenPrincipal{
     
     grid-column: 2fr 1fr;
@@ -131,12 +162,17 @@ body{
     background-image: linear-gradient(black,rgb(204, 17, 17) 70%,black);
     text-align: center;
 }
-
+.caracteristicasbs{
+    padding: 25px;
+    background-image: linear-gradient(black,rgb(204, 17, 17) 70%,black);
+    display: flex;
+    text-align: center;
+}
 
 h2{
     color:black;   
 }
-.caracteristicas h3, .caracteristicas p{
+.caracteristicas h3, .caracteristicas p, .caracteristicasbs h3, .caracteristicasbs p{
     color:white;   
 }
 .tablaProductos{
@@ -148,6 +184,7 @@ h2{
 
 
 .contenidoFinal{
+    margin-top: 40px;
     position: relative;
     width: 100%;
     height: 250px;
@@ -192,7 +229,7 @@ h2{
 .redes a{
     border: solid white 2px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     color: white;
     font-size: 15px;
     text-decoration: none;
@@ -220,7 +257,25 @@ h2{
 /*.coche1{
     border: solid 2px black;  
 }*/
-
+.figura1bs{
+    padding: 20px;
+    text-align: center;
+    /*border: solid yellow 2px;*/
+}
+.card-body{
+    transition: transform .2s;
+}
+.card-body:hover{
+    transform: scale(1.2);
+}
+.cardsbs{
+    /*border: solid green 2px;*/
+    padding: 20px;
+}
+.botonbs{
+    background-color: rgb(204, 17, 17);
+    border-color:rgb(204, 17, 17) ;
+}
 .seleccion{
     margin-top: 100px;  
     height: 50px;

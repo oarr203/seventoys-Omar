@@ -1,138 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
     <title>Seven Toys</title>
 </head>
+
 <body>
-<header>
-    <div class="inicio">
-        <img src="../images/logo.jpg" alt="seven toys" width="100" height="100" class="logo">
-        <nav id="navegacion" class="navegacion">
-            <a href="index.html" class="menu">INICIO</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="../pages/autos.html" class="menu">AUTOS</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="../pages/figuras.html" class="menu">FIGURAS</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="../pages/preguntas.html" class="menu">PREGUNTAS FRECUENTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="../pages/contacto.html" class="menu">CONTACTO</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <header>
+        <!--inicio navbar-->
+        <!-- A grey horizontal navbar that becomes vertical on small screens -->
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo2.jpg" alt="Logo" class="logobs"></a>
+            <!-- Links -->
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse narvarcolapsebs" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/autos.html">AUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/figuras.html">FIGURAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/preguntas.html">PREGUNTAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
-        <div class="menu2">
-            <li>
-                <ul><a href="../index.html" class="menu2_1">INICIO</a></ul>
-                <ul><a href="autos.html" class="menu2_1">AUTOS</a></ul>
-                <ul><a href="figuras.html" class="menu2_1">FIGURAS</a></ul>
-                <ul><a href="preguntas.html" class="menu2_1">PREGUNTAS FRECUENTES</a></ul>
-            </li>
+        <!--fin navbar-->
+
+        <!--<div class="inicio">
+            <img src="../images/logo.jpg" alt="seven toys" width="100" height="100" class="logo">
+            <nav id="navegacion" class="navegacion">
+                <a href="index.html" class="menu">INICIO</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/pages/autos.html" class="menu">AUTOS</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="../pages/figuras.html" class="menu">FIGURAS</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="../pages/preguntas.html" class="menu">PREGUNTAS FRECUENTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="../pages/contacto.html" class="menu">CONTACTO</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            </nav>
+            <div class="menu2">
+                <li>
+                    <ul><a href="../index.html" class="menu2_1">INICIO</a></ul>
+                    <ul><a href="autos.html" class="menu2_1">AUTOS</a></ul>
+                    <ul><a href="figuras.html" class="menu2_1">FIGURAS</a></ul>
+                    <ul><a href="preguntas.html" class="menu2_1">PREGUNTAS FRECUENTES</a></ul>
+                </li>
+            </div>
+            <br><br>
+        </div>-->
+    </header>
+    <main>
+        <!--carrusel inicio-->
+        <div id="demo" class="carousel slide porta" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators indicadores">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner portadas">
+                <div class="carousel-item active">
+                    <img src="images/portada.jpg" alt="Funko pop">
+                    <div class="carousel-caption">
+                        <h3>Funko pop</h3>
+                        <p>Gran variedad de figuras!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/portada2a.jpg" alt="Clasico">
+                    <div class="carousel-caption">
+                        <h3>Clasicos</h3>
+                        <p>Coches a escala de coleccion </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/portada3a.jpg" alt="Funco child">
+                    <div class="carousel-caption">
+                        <h3>Funko Yoda child</h3>
+                        <p>Excelente figura</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/portada4a.jpg" alt="lamborghini">
+                    <div class="carousel-caption">
+                        <h3>Lambirghini</h3>
+                        <p>Coches deportivos y mas!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/portada5a.jpg" alt="Volkswawen">
+                    <div class="carousel-caption">
+                        <h3>Volkswawen</h3>
+                        <p>Coches de para todos los gustos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
         </div>
-        <br><br>
-    </div>
-</header> 
-<main>  
-    <div class="textoPrincipal">    
-    <!--<img src="../images/portada.jpg" alt="portada"  class="imagenPrincipal"> 
-        <img src="../images/portada2.jpg" alt="portada" class="imagenPrincipal"> -->
+        <!-- fin carrusel -->
+
+        <!-- <div class="textoPrincipal">    
+    <img src="../images/portada.jpg" alt="portada"  class="imagenPrincipal"> 
+        <img src="../images/portada2.jpg" alt="portada" class="imagenPrincipal"> c
         <div class="textoImagen">
             <h2>Los articulos de coleccion que buscas estan aqui</h2>
             <p>Los mejores articulos de coleccion, figuras, autos a escala a los mejores precios, si no encuentras lo que buscas escribenos podemos ayudarte a conseguir la figura que necesites</p>
         </div>
-    </div>
-</main>
-<h2> <center> Lo mas reciente</center></h2>       
-<div class="tablas">
-    <div class="producto1 product1">
-        <img src="../images/figuras/funko1.jpg" alt="producto1" height="200" width="240">
-        <p>Funco Pop Green Day: $54.900</p>
-        <input type="button" value="Comprar">
-    </div>
-    <div class="producto1 product">    
-        <img src="../images/figuras/funko2.jpg" alt="producto2" height="200" width="240">
-        <p>Funco Pop Sylvie: $59.900</p>
-        <input type="button" value="Comprar">
-    </div>
-    <div class="producto1 product">    
-        <img src="../images/coches/coche1.jpg" alt="producto3" height="200" width="240">
-        <p>Modelo Buggie: $12.900</p>
-        <input type="button" value="Comprar">
-    </div>
-    <div class="producto1 product">    
-        <img src="../images/coches/coche2.jpg" alt="producto4" height="200" width="240">
-        <p>Modelo Banz amarillo: $14.900</p>
-        <input type="button" value="Comprar">
-    </div>
-      
-</div><br><br>
-<h2> <center> ADQUIERE EN SEVEN TOYS TUS FIGURAS FAVORITAS</center></h2><br><br>
-
-<div class="caracteristicas">
-    
-        <h3 class="seguridad">SEGURIDAD</h3>
-    
-        <h3 class="envios">ENVIOS</h3>
-    
-        <h3 class="garantia">GARANTIA</h3>
-    
-    
-        <p class="contamos">Contamos con amplia trayectoria y experiencia de tres a&ntildeos, somos una tienda reconocida, contamos con la aprobacion de nuestros
-                clientes, puedes verificar nuestra reputacion en nuestras distintas reds sociales</p>
-        <p class="ofrecemos">Ofrecemos servicio de envio nacional, una vez verificado el pago por los medios autorizados, el costo del envio
-                 dentro de la cuidad tiene un valor de 10.000 pesos, fuera de la cuidad lo determinado por el servicio de mensajeria.
-        </p>
-        <p class="todos">Todos nuestros productos cuentan con garantia, por favor leer terminos y condiciones al momento de realizar la compra.</p>
-    
-    </div>
-<br><br>
-<h2 class="promociones">PROMOCIONES</h2>
-<div class="tablaProductos">
-    <div class="producto1">
-        <img src="../images/figuras/funko3.jpg" alt="producto5" height="220" width="260" class="producto">
-        <p>Funco Pop Walle: $34.900</p>
-        <input type="button" value="Comprar" class="comprar">
-    </div>
-    <div class="producto1">
-        <img src="../images/figuras/funko4.jpg" alt="producto7" height="220" width="260" class="producto">
-        <p>Funco Pop Dodoria: $32.900</p>
-        <input type="button" value="Comprar" class="comprar">
-    </div>
-    <div class="producto1">
-        <img src="../images/coches/coche3.jpg" alt="producto8" height="220" width="260" class="producto">
-        <p>Modelo Banz azul: $10.900</p>
-        <input type="button" value="Comprar" class="comprar">
-    </div>
-    <div class="producto1">
-        <img src="../images/coches/coche4.jpg" alt="producto9" height="220" width="260" class="producto">
-        <p>Modelo Chevrolet sprint: $9.900</p>
-        <input type="button" value="Comprar" class="comprar">
-    </div>        
-</div><br><br>
-<footer> 
-    <div class="contenidoFinal">
-        <div class="menuInferior">
-            <h4>Seven Toys</h4>
-            <ul>
-                <li>Inicio</li>
-                <li>Autos</li>
-                <li>Figuras</li>
-                <li>Preguntas</li>
-                <li>Contacto</li>
-            </ul>
+    </div>-->
+    </main>
+    <h2>
+        <center> LO MAS RECIENTE</center>
+    </h2>
+    <div class="tablas">
+        <div class="producto1 product1">
+            <img src="../images/figuras/funko1.jpg" alt="producto1" height="200" width="240">
+            <p>Funco Pop Green Day: $54.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
         </div>
-    <div class="sobreSevenToys"> 
-    <h4>Sobre Seven Toys</h4>
-    <p>Somos una tienda online de articulos coleccionables. inciamos con autos de coleccion y estamos ampliando nuestro catalogo
-                para ofrecer una mayor variedad en cuanto a productos y medios de pago para mayor facilidad </p><br>
-    </div>
-        <div class="contacto">     
-            <h4>Contacto</h4>
-            <p>Si tienes alguna consulta o sugerencia, nos puedes escribir a atencion@seventoys.com.co</p><br><br>
-            <div class="redes">
-                <img src="../images/redes/twitter.png" alt="" height="50" width="50" class="logoRedes"> 
-                <img src="../images/redes/facebook.png" alt="" height="50" width="50" class="logoRedes">
-                <img src="../images/redes/instagram.png" alt="" height="50" width="50" class="logoRedes">
-                <a href="index.html#navegacion">Volver a inicio</a>
+        <div class="producto1 product">
+            <img src="../images/figuras/funko2.jpg" alt="producto2" height="200" width="240">
+            <p>Funco Pop Sylvie: $59.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+        <div class="producto1 product">
+            <img src="../images/coches/coche1.jpg" alt="producto3" height="200" width="240">
+            <p>Modelo Buggie: $12.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+        <div class="producto1 product">
+            <img src="../images/coches/coche2.jpg" alt="producto4" height="200" width="240">
+            <p>Modelo Banz amarillo: $14.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+
+    </div><br><br>
+    <h2>
+        <center> ADQUIERE EN SEVEN TOYS TUS FIGURAS FAVORITAS</center>
+    </h2><br><br>
+
+    <div class="container-fluid caracteristicasbs">
+        <div class="row">
+            <div class="seguridadbs col-md-4">
+                <h3 class="seguridad">SEGURIDAD</h3>
+                <p class="contamosbs">Contamos con amplia trayectoria y experiencia de tres a&ntildeos, somos una tienda
+                    reconocida, contamos con la aprobacion de nuestros
+                    clientes, puedes verificar nuestra reputacion en nuestras distintas reds sociales</p>
             </div>
-        </div>        
-    </div>  
-</footer>
+            <div class="ofrecemosbs col-md-4">
+                <h3 class="envios">ENVIOS</h3>
+                <p class="ofrecemosbs">Ofrecemos servicio de envio nacional, una vez verificado el pago por los medios
+                    autorizados, el costo del envio
+                    dentro de la cuidad tiene un valor de 10.000 pesos, fuera de la cuidad lo determinado por el
+                    servicio de
+                    mensajeria.
+                </p>
+            </div>
+            <div class="todosbs col-md-4">
+                <h3 class="garantia">GARANTIA</h3>
+                <p class="todosbs">Todos nuestros productos cuentan con garantia, por favor leer terminos y condiciones
+                    al momento
+                    de realizar la compra.</p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--<div class="caracteristicas">
+
+        <h3 class="seguridad">SEGURIDAD</h3>
+
+        <h3 class="envios">ENVIOS</h3>
+
+        <h3 class="garantia">GARANTIA</h3>
+
+
+        <p class="contamos">Contamos con amplia trayectoria y experiencia de tres a&ntildeos, somos una tienda
+            reconocida, contamos con la aprobacion de nuestros
+            clientes, puedes verificar nuestra reputacion en nuestras distintas reds sociales</p>
+        <p class="ofrecemos">Ofrecemos servicio de envio nacional, una vez verificado el pago por los medios
+            autorizados, el costo del envio
+            dentro de la cuidad tiene un valor de 10.000 pesos, fuera de la cuidad lo determinado por el servicio de
+            mensajeria.
+        </p>
+        <p class="todos">Todos nuestros productos cuentan con garantia, por favor leer terminos y condiciones al momento
+            de realizar la compra.</p>
+
+    </div>-->
+    <br><br>
+    <h2 class="promociones">PROMOCIONES</h2>
+    <div class="tablaProductos">
+        <div class="producto1">
+            <img src="../images/figuras/funko3.jpg" alt="producto5" height="220" width="260" class="producto">
+            <p>Funco Pop Walle: $34.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+        <div class="producto1">
+            <img src="../images/figuras/funko4.jpg" alt="producto7" height="220" width="260" class="producto">
+            <p>Funco Pop Dodoria: $32.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+        <div class="producto1">
+            <img src="../images/coches/coche3.jpg" alt="producto8" height="220" width="260" class="producto">
+            <p>Modelo Banz azul: $10.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+        <div class="producto1">
+            <img src="../images/coches/coche4.jpg" alt="producto9" height="220" width="260" class="producto">
+            <p>Modelo Chevrolet sprint: $9.900</p>
+            <button type="button" class="btn btn-danger">Comprar</button>
+        </div>
+    </div><br><br>
+    <footer>
+        <div class="contenidoFinal">
+            <div class="menuInferior">
+                <h4>Seven Toys</h4>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Autos</li>
+                    <li>Figuras</li>
+                    <li>Preguntas</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <div class="sobreSevenToys">
+                <h4>Sobre Seven Toys</h4>
+                <p>Somos una tienda online de articulos coleccionables. inciamos con autos de coleccion y estamos
+                    ampliando nuestro catalogo
+                    para ofrecer una mayor variedad en cuanto a productos y medios de pago para mayor facilidad </p><br>
+            </div>
+            <div class="contacto">
+                <h4>Contacto</h4>
+                <p>Si tienes alguna consulta o sugerencia, nos puedes escribir a atencion@seventoys.com.co</p><br><br>
+                <div class="redes">
+                    <img src="../images/redes/twitter.png" alt="" height="50" width="50" class="logoRedes">
+                    <img src="../images/redes/facebook.png" alt="" height="50" width="50" class="logoRedes">
+                    <img src="../images/redes/instagram.png" alt="" height="50" width="50" class="logoRedes">
+                    <a href="index.html#navegacion">Volver a inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
