@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilos.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="inicio">
+    <header>
+        <!--inicio navbar-->
+        <!-- A grey horizontal navbar that becomes vertical on small screens -->
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo2.jpg" alt="Logo" class="logobs"></a>
+            <!-- Links -->
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse narvarcolapsebs" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="autos.html">AUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="figuras.html">FIGURAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preguntas.html">PREGUNTAS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--fin navbar-->
+    </header>
+
+
+
+    <!--<div class="inicio">
         <img src="../images/logo.jpg" alt="seven toys" width="100" height="100" class="logo">
-    
+
         <nav class="navegacion2">
             <a href="../index.html" class="menu">INICIO</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="autos.html" class="menu">AUTOS</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -24,67 +63,89 @@
                 <ul><a href="preguntas.html" class="menu2_1">PREGUNTAS FRECUENTES</a></ul>
             </li>
         </div>
-    </div><br>
-
+    </div>-->
+    <div class="jumbotron">
+        <h1>CONTACTANOS</h1>
+        <p>Buscas alguna figura en especifico, tienes dudas, podemos ayudarte a encontra eso que tanto quieres,
+            escribenos para tener el gusto de atenderte, nos pondremos en contactto contigo.</p>
+    </div>
     <div class="formulario">
-        <center><h2>CONTACTO</h2></center>
-        <form action="" >
+        <form action="">
+            <p>
+                <label for="">Nombre Completo</label>
+                <input type="text" name="" id="" class="campo_form" placeholder="Ejemplo: Carlos Muñoz" required>
+            </p>
+            <p>
+                <label for="">Correo electronico</label>
+                <input type="email" name="" id="" class="campo_form" placeholder="Ejemplo: carlos@muñoz.com" required>
+            </p>
+            <p>
+                <label for="">Telefono</label>
+                <input type="text" name="" id="" class="campo_form" placeholder="Ejemplo: 300123456" required>
+            </p>
+            <p>
+
+                <label for="asunto">Asunto</label>
+                <select name="asunto" id="" class="campo_form" class="opcion">
+                    <option value="compra" class="opcion">Compra</option>
+                    <option value="consulta" class="opcion">Consulta</option>
+                    <option value="sugerencia" class="opcion">Sugerencia</option>
+                </select>
+            </p>
+            <p>
+                <label for="">Mensaje</label><br>
+                <textarea name="" id="" cols="82" rows="5" placeholder="Digita tu mensaje"
+                    class="campo_form"></textarea>
                 <p>
-        <label for="">Nombre Completo</label>
-        <input type="text" name="" id="" class="campo_form" placeholder="Ejemplo: Carlos Muñoz" required>
-    </p>
-    <p>
-        <label for="">Correo electronico</label>
-        <input type="email" name="" id="" class="campo_form" placeholder="Ejemplo: carlos@muñoz.com" required>
-    </p>
-    <p>
-        <label for="">Telefono</label>
-        <input type="text" name="" id="" class="campo_form" placeholder="Ejemplo: 300123456" required>
-    </p>
-    <p>
 
-        <label for="asunto">Asunto</label>
-        <select name="asunto" id="" class="campo_form" class="opcion" >
-            <option value="compra" class="opcion">Compra</option>
-            <option value="consulta" class="opcion">Consulta</option>
-            <option value="sugerencia" class="opcion">Sugerencia</option>
-        </select>
-    </p>
-    <p>
-        <label for="">Mensaje</label><br>
-        <textarea name="" id="" cols="82" rows="5" placeholder="Digita tu mensaje" class="campo_form"></textarea>
-        <p>
-        <label for="notificacion">Desea recibir Notificaciones</label>
-        <input type="checkbox" name="notificacon" id="" >
-    </p>
-        <input type="reset" value="Limpiar" class="notificacion">
-        <input type="submit" value="Enviar" class="notificacion">
-    </p>
-
-            
+                    <!--<label for="notificacion">Desea recibir Notificaciones</label>
+                    <input type="checkbox" name="notificacon" id="">-->
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">DESEA RECIBIR NOTIFICACIONES Y
+                            OFERTAS?</label>
+                    </div>
+                </p>
+                <input type="reset" value="Limpiar" class="notificacion">
+                <input type="submit" value="Enviar" class="notificacion">
+            </p>
         </form>
     </div>
-    <br><br>
-
-     <footer>
+    <footer>
         <div class="contenidoFinal">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.169237333623!2d-74.14346061658057!3d4.711138589773749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f834b998be7e5%3A0xc1b6c8df320b848d!2sCra.%20119%20%2363d-35%20a%2063d-1%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1649900144833!5m2!1ses-419!2sco" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
-            <div class="sobreSevenToys">  
-            <h4>Sobre Seven Toys</h4>
-            <p>Somos una tienda online de articulos coleccionables. inciamos con autos de coleccion y estamos ampliando nuestro catalogo
-                para ofrecer una mayor variedad en cuanto a productos y medios de pago para mayor facilidad </p><br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.169237333623!2d-74.14346061658057!3d4.711138589773749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f834b998be7e5%3A0xc1b6c8df320b848d!2sCra.%20119%20%2363d-35%20a%2063d-1%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1649900144833!5m2!1ses-419!2sco"
+                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+            <div class="sobreSevenToys">
+                <h4>Sobre Seven Toys</h4>
+                <p>Somos una tienda online de articulos coleccionables. inciamos con autos de coleccion y estamos
+                    ampliando nuestro catalogo
+                    para ofrecer una mayor variedad en cuanto a productos y medios de pago para mayor facilidad </p><br>
             </div>
             <div class="contacto">
                 <h4>Contacto</h4>
-                    <p>Si tienes alguna consulta o sugerencia, nos puedes escribir a atencion@seventoys.com.co</p><br><br>
+                <p>Si tienes alguna consulta o sugerencia, nos puedes escribir a atencion@seventoys.com.co</p><br><br>
                 <div class="redes">
-                    <img src="../images/redes/twitter.png" alt="" height="50" width="50" class="logoRedes"> 
+                    <img src="../images/redes/twitter.png" alt="" height="50" width="50" class="logoRedes">
                     <img src="../images/redes/facebook.png" alt="" height="50" width="50" class="logoRedes">
                     <img src="../images/redes/instagram.png" alt="" height="50" width="50" class="logoRedes"><br>
                     <a href="../index.html">Volver a inicio</a>
-                 </div>  
-             </div>  
-        </div> 
-    </footer>   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
