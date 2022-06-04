@@ -1,645 +1,500 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap");
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
-}
-
-.inicio {
-    margin-top: 0px;
-    /*position: fixed;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    background-image: linear-gradient(black, rgb(204, 17, 17) 50%);
-    height: 110px;
-    z-index: 100;
-    width: 100hv;
-    /*border: solid 2px green;*/
-
+  font-family: "Kanit", sans-serif;
 }
 
 .navbar {
-    background-image: linear-gradient(black, rgb(204, 17, 17) 50%);
+  background-image: linear-gradient(black, rgb(204, 17, 17) 50%);
 }
-
-.navegacion {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    justify-self: right;
-    margin-top: 6%;
-    color: white;
+.navbar .logobs {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
-
-.navegacion2 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    justify-self: right;
-    margin-top: 6%;
-    color: white;
+.navbar .logobs {
+  animation: rotation 7s infinite linear;
 }
-
-.logo {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border-radius: 50%;
-    margin-top: 1.5%;
-    margin-left: 1.5%;
-    z-index: 10;
-}
-
-.logobs {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
-.logobs {
-    animation: rotation 7s infinite linear;
-}
-
 @keyframes rotation {
-    form {
-        transform: rotatey(0deg);
-    }
-
-    to {
-        transform: rotatey(360deg);
-    }
+  from {
+    transform: rotatey(0deg);
+  }
+  to {
+    transform: rotatey(360deg);
+  }
 }
-
-.narvarcolapsebs {
-    justify-content: right;
-    font-weight: bold;
-}
-
-.menu {
-    color: white;
-    text-decoration: none;
-    padding: 7px;
-    border-radius: 4px;
-}
-
-.menu:hover {
-    background-color: rgba(255, 255, 5255, 0.5);
-}
-
-
-.textoPrincipal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    height: 500px;
-    width: 100%;
-    background-image: url(images/portada2.jpg);
-    background-size: cover;
-    background-position: center;
+.navbar .narvarcolapsebs {
+  justify-content: right;
+  font-weight: bold;
 }
 
 .portadas {
-    /*border: solid 2px green;*/
-    background-color: black;
+  /*border: solid 2px green;*/
+  background-color: black;
 }
-
 .portadas img {
-    width: 74%;
-    margin-left: 13%;
-    height: 20%;
+  width: 74%;
+  margin-left: 13%;
+  height: 20%;
 }
 
 .indicadores li {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgb(204, 17, 17)
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(204, 17, 17);
 }
 
-.portadas p,
+.portadas p {
+  color: rgb(204, 17, 17);
+}
 .portadas h3 {
-    color: rgb(204, 17, 17);
-
-}
-
-/*.imagenPrincipal{
-    
-    grid-column: 2fr 1fr;
-    margin-top: 0;
-    height: 600px;
-    width: 100%; 
-}*/
-.textoImagen {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: right;
-    margin-right: 5%;
-    color: rgb(204, 17, 17);
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.textoImagen h2 {
-    font-size: 40px;
-}
-
-.textoImagen p {
-    margin-top: 40px;
-    font-size: 20px;
+  color: rgb(204, 17, 17);
 }
 
 .tablas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    text-align: center;
-    /* border: solid 2px black;*/
-    padding-top: 3px;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  /* border: solid 2px black;*/
+  padding-top: 3px;
+  margin-top: 30px;
+}
+.tablas .producto1 {
+  width: 300px;
+  /*border: solid blue 2px;*/
+  transition: transform 0.2s;
+}
+.tablas .producto1 .producto {
+  height: 220px;
+  width: 260px;
+}
+.tablas .producto1:hover {
+  transform: scale(1.2);
 }
 
-.producto1,
-.valor,
-.compra {
-    width: 300px;
-    /*border: solid blue 2px;*/
-}
-
-.producto1,
 .itemescala {
-    transition: transform .2s;
-}
-
-.producto1:hover,
-.itemescala:hover {
-    transform: scale(1.2);
-}
-
-.caracteristicas {
-    display: grid;
-    padding: 2%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3%;
-    /*border: solid greenyellow 2px;*/
-    background-image: linear-gradient(black, rgb(204, 17, 17) 70%, black);
-    text-align: center;
+  transition: transform 0.2s;
 }
 
 .caracteristicasbs {
-    padding: 25px;
-    background-image: linear-gradient(black, rgb(204, 17, 17) 70%, black);
-    display: flex;
-    text-align: center;
-    margin-bottom: 30px;
+  padding: 25px;
+  background-image: linear-gradient(black, rgb(204, 17, 17) 70%, black);
+  display: flex;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.caracteristicasbs h3,
+.caracteristicasbs p {
+  color: white;
 }
 
 h2 {
-    color: black;
-}
-h2::first-letter{
-    color:rgb(204, 17, 17);
-    font-size: 120%;
+  color: black;
 }
 
-.caracteristicas h3,
-.caracteristicas p,
-.caracteristicasbs h3,
-.caracteristicasbs p {
-    color: white;
+h2::first-letter {
+  color: rgb(204, 17, 17);
+  font-size: 120%;
 }
 
 .tablaProductos {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.tablaProductos .producto1 {
+  width: 300px;
+  /*border: solid red 2px;*/
+  transition: transform 0.2s;
+}
+.tablaProductos .producto1 .producto {
+  height: 220px;
+  width: 260px;
+}
+.tablaProductos .producto1:hover,
+.tablaProductos .itemescala:hover {
+  transform: scale(1.2);
 }
 
 .contenidoFinal {
-    margin-top: 40px;
-    position: relative;
-    width: 100%;
-    height: 250px;
-    color: white;
-    background-image: linear-gradient(45deg, rgb(204, 17, 17) 20%, black);
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  color: white;
+  background-image: linear-gradient(45deg, rgb(204, 17, 17) 20%, black);
+}
+.contenidoFinal .menuInferior {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+}
+.contenidoFinal .mapa {
+  height: 240px;
+  width: 390px;
+  margin: 5px 0 0 5px;
+}
+.contenidoFinal .sobreSevenToys {
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  width: 370px;
+}
+.contenidoFinal .contacto {
+  position: absolute;
+  top: 20px;
+  right: 0%;
+  width: 320px;
+  height: 200px;
+  /* border: solid green 2px;*/
+}
+.contenidoFinal .contacto .redes {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 100%;
+  /*border: solid yellow 2px;*/
+  display: flex;
+  justify-content: space-between;
+}
+.contenidoFinal .contacto .redes .logoRedes {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s;
+}
+.contenidoFinal .contacto .redes .logoRedes:hover {
+  transform: scale(1.5);
+}
+.contenidoFinal .contacto .redes a {
+  border: solid white 2px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.contenidoFinal .contacto .redes a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.menuInferior {
-    position: absolute;
-    top: 20px;
-    left: 5%;
+/*autos*/
+.seleccion {
+  margin-top: 30px;
+  height: 50px;
+  /*border: solid $colorprincipal;*/
 }
 
-.sobreSevenToys {
-    position: absolute;
-    top: 20px;
-    left: 30%;
-    width: 400px;
+.coches {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 440px 440px 440px 440px;
+  /*border: solid 1px green;*/
+  text-align: center;
+}
+.coches .itemescala {
+  transition: transform 0.2s;
+}
+.coches .itemescala:hover {
+  transform: scale(1.2);
+}
+.coches img {
+  margin-top: 10%;
+  width: 320px;
+  height: 260px;
+}
+.coches p::after {
+  content: " Pesos Col";
 }
 
-.contacto {
-    position: absolute;
-    top: 20px;
-    right: 0%;
-    width: 30%;
-    height: 200px;
-    /* border: solid green 2px;*/
-}
-
-.redes {
-    position: absolute;
-    bottom: 0;
-    right: 0%;
-    width: 100%;
-    /*border: solid yellow 2px;*/
-    display: flex;
-    justify-content: space-between;
-}
-
-.logoRedes {
-    width: 50px;
-    transition: transform .2s;
-}
-
-.logoRedes:hover {
-    transform: scale(1.5);
-}
-
-.redes a {
-    border: solid white 2px;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-
-}
-
-.redes a:hover {
-    background-color: rgba(255, 255, 5255, 0.5);
-}
-
-/*----------------- autos--------------------*/
-.coches,
-.figuras {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 440px 440px 440px 440px;
-    /*border: solid 1px green;*/
-    text-align: center;
-}
-
-.coches img,
-.figuras img {
-    margin-top: 10%;
-}
-
-.coches p::after,
+/*figuras*/
 .figurasbs p::after {
-    content: " Pesos Col";
-}
-
-/*.coche1{
-    border: solid 2px black;  
-}*/
-.figura1bs {
-    padding: 20px;
-    text-align: center;
-    /*border: solid yellow 2px;*/
-}
-
-.card-body {
-    transition: transform .2s;
-}
-
-.card-body:hover {
-    transform: scale(1.2);
+  content: " Pesos Col";
 }
 
 .cardsbs {
-    /*border: solid green 2px;*/
-    padding: 20px;
+  /*border: solid green 2px;*/
+  padding: 20px;
+}
+.cardsbs .figura1bs {
+  padding: 20px;
+  text-align: center;
+  /*border: solid yellow 2px;*/
+}
+.cardsbs .figura1bs .card-body {
+  transition: transform 0.2s;
+}
+.cardsbs .figura1bs .card-body .botonbs {
+  background-color: rgb(204, 17, 17);
+  border-color: rgb(204, 17, 17);
+}
+.cardsbs .figura1bs .card-body:hover {
+  transform: scale(1.2);
 }
 
-.botonbs {
-    background-color: rgb(204, 17, 17);
-    border-color: rgb(204, 17, 17);
-}
-
-.seleccion {
-    margin-top: 100px;
-    height: 50px;
-    /*border: solid rgb(204, 17, 17); */
-}
-
-.menu2 {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height: 200px;
-    text-align: right;
-    background-image: linear-gradient(black, rgb(204, 17, 17));
-    /*transition: all 0.3s;
-    transform: translateX(100%);*/
-    display: none;
-}
-
-.menu2 li {
-    list-style-type: none;
-}
-
-.menu2_1 {
-    /*border: solid black 2px;*/
-    padding: 10px;
-}
-
-.menu2 ul {
-    height: 52px;
-}
-
-.menu2 a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    border-bottom: solid white 1px;
-}
-
-.menu2_1:hover {
-    background-color: rgba(255, 255, 5255, 0.5);
-
-}
-
+/*contacto*/
 .jumbotron {
-    background-image: url(images/jumbotron.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    font-size: 20px;
-    color: white;
-    padding-top: 7%;
+  background-image: url(images/jumbotron.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  font-size: 20px;
+  color: white;
+  padding-top: 7%;
 }
-
 .jumbotron p::after {
-    content: " Manejamos envíos a todo el territorio nacional. Los costos y tiempos de envío dependerán del lugar de destino ya descritos en la pagina";
+  content: " Manejamos envíos a todo el territorio nacional. Los costos y tiempos de envío dependerán del lugar de destino ya descritos en la pagina";
 }
 
 .formulario {
-    background-color: black;
-    padding: 10px 40px;
-    border-radius: 5px;
-    position: relative;
-    top: 20px;
-    left: 22%;
-    width: 50%;
-    height: 810px;
-    color: white;
-    margin-bottom: 100px;
+  background-color: black;
+  padding: 10px 40px;
+  border-radius: 5px;
+  position: relative;
+  top: 20px;
+  left: 22%;
+  width: 50%;
+  height: 810px;
+  color: white;
+  margin-bottom: 100px;
+}
+.formulario .campo_form {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid rgb(204, 17, 17);
+  padding: 10px;
+  color: white;
+}
+.formulario .notificacion {
+  color: white;
+  background-color: rgb(204, 17, 17);
+  width: 100%;
+  height: 35px;
+  border: none;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  transition: height 1s;
+}
+.formulario .notificacion:hover {
+  height: 50px;
+}
+.formulario .opcion {
+  color: white;
+  background-color: black;
 }
 
-.campo_form {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: none;
-    border-bottom: 1px solid rgb(204, 17, 17);
-    padding: 10px;
-    color: white;
-}
-
-.notificacion {
-    color: white;
-    background-color: rgb(204, 17, 17);
-    width: 100%;
-    height: 35px;
-    border: none;
-    padding: 5px;
-    margin-top: 20px;
-    font-size: 20px;
-    transition: height 1s;
-}
-
-.notificacion:hover {
-    height: 50px;
-}
-
-.opcion {
-    color: white;
-    background-color: black;
-}
-
-.mapa {
-    height: 240px;
-    width: 390px;
-    margin: 5px 0 0 5px;
-}
-
+/*preguntas*/
 .preguntas {
-    margin-top: 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17, 0.5)), url(../images/fondo.jpg);
-    height: 500px;
+  margin-top: 50px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgba(204, 17, 17, 0.5)), url(../images/fondo.jpg);
+  height: 500px;
 }
-.preguntas h2{
-    text-align: center;
+.preguntas h2 {
+  text-align: center;
 }
-
 .preguntas h4 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
 }
-.preguntas h4::first-letter{
-    color:rgb(204, 17, 17);    
+.preguntas h4::first-letter {
+  color: rgb(204, 17, 17);
 }
-.pregunta1{
-    height: 40px;
-    overflow:hidden;
-    margin-top: 20px;
-    cursor: pointer;
+.preguntas .pregunta1 {
+  height: 40px;
+  overflow: hidden;
+  margin-top: 20px;
+  cursor: pointer;
 }
-.pregunta1:hover{
-    height: auto;
-    overflow:visible;
+.preguntas .pregunta1 .respuesta {
+  background-color: white;
 }
-.respuesta{
-    background-color: white;
+.preguntas .pregunta1:hover {
+  height: auto;
+  overflow: visible;
 }
-
 
 @media only screen and (max-width: 1215px) {
-    .inicio {
-        grid-template-columns: 1fr 2fr;
-    }
+  .inicio {
+    grid-template-columns: 1fr 2fr;
+  }
 
-    .navegacion {
-        grid-column: 2/3;
-    }
+  .navegacion {
+    grid-column: 2/3;
+  }
 
-    /*.tablas{
-        background-color: blueviolet;
-    }*/
-
+  /*.tablas{
+      background-color: blueviolet;
+  }*/
 }
-
 @media only screen and (max-width: 983px) {
-    .contenidoFinal {
-        height: 750px;
-        font-size: 20px;
-    }
+  .contenidoFinal {
+    height: 770px;
+    font-size: 20px;
+    width: 100%;
+  }
 
-    .menuInferior {
-        width: 90%;
-        /*border: solid green 2px;*/
-        text-align: center;
-    }
+  .menuInferior {
+    left: 0;
+    width: 90%;
+    /*border: solid green 2px;*/
+    text-align: center;
+    position: absolute;
+  }
 
-    .menuInferior li {
-        list-style-type: none;
-    }
+  .menuInferior li {
+    list-style-type: none;
+  }
 
-    .sobreSevenToys {
-        top: 250px;
-        width: 90%;
-        /*border: solid green 2px;*/
-        text-align: center;
-        left: 5%;
+  .sobreSevenToys {
+    margin-top: 250px;
+    text-align: center;
+  }
 
+  .contacto {
+    left: 33%;
+    margin-top: 520px;
+    text-align: center;
+  }
 
-    }
+  .redes {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .contacto {
-        top: 500px;
-        width: 90%;
-        /* border: solid green 2px;*/
-        text-align: center;
-        left: 5%;
-    }
+  .coches img,
+.figuras img {
+    height: 200px;
+    width: 240px;
+  }
 
-    .redes {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
+  .coches,
+.figuras {
+    grid-template-rows: 340px 340px 340px 340px;
+  }
 
-    }
-
-    .coches img,
-    .figuras img {
-        height: 200px;
-        width: 240px;
-    }
-
-    .coches,
-    .figuras {
-        grid-template-rows: 300px 300px 300px 300px;
-    }
+  .itemescala {
+    border: solid 2px red;
+  }
 }
-
 @media only screen and (max-width: 742px) {
+  .coches,
+.figuras {
+    /*background-color: blueviolet;*/
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .coches,
-    .figuras {
-        /*background-color: blueviolet;*/
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .coches img,
+.figuras img {
+    height: 190px;
+    width: 250px;
+  }
 
-    .coches img,
-    .figuras img {
-        height: 190px;
-        width: 250px;
-    }
-
-    .textoImagen {
-        grid-column: 1/3;
-    }
+  .textoImagen {
+    grid-column: 1/3;
+  }
 }
-
 @media only screen and (max-width: 702px) {
-    .navegacion2 {
-        display: none;
-    }
+  .navegacion2 {
+    display: none;
+  }
 
-    .menu2 {
-        /*transform: translateX(0);*/
-        display: inline;
-    }
-
+  .menu2 {
+    /*transform: translateX(0);*/
+    display: inline;
+  }
 }
-
 @media only screen and (max-width: 607px) {
-    .caracteristicas {
-        display: grid;
-        grid-template-columns: 1fr;
-        height: 330px;
-    }
+  .caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 330px;
+  }
 
-    .seguridad {
-        grid-row: 1/2;
-    }
+  .seguridad {
+    grid-row: 1/2;
+  }
 
-    .envios {
-        grid-row: 3/4;
-    }
+  .envios {
+    grid-row: 3/4;
+  }
 
-    .garantia {
-        grid-row: 5/6;
-    }
+  .garantia {
+    grid-row: 5/6;
+  }
 
-    .contamos {
-        grid-row: 2/3;
-    }
+  .contamos {
+    grid-row: 2/3;
+  }
 
-    .ofrecemos {
-        grid-row: 4/5;
-    }
+  .ofrecemos {
+    grid-row: 4/5;
+  }
 
-    .todos {
-        grid-row: 6/7;
-    }
+  .todos {
+    grid-row: 6/7;
+  }
 
-    .promociones {
-        text-align: center;
-        /* border: solid greenyellow 2px;*/
-    }
+  .promociones {
+    text-align: center;
+    /* border: solid greenyellow 2px;*/
+  }
 }
-
 @media only screen and (max-width: 580px) {
-    .caracteristicas {
-        height: 500px;
+  .caracteristicas {
+    height: 500px;
+  }
 
-    }
+  .contenidoFinal {
+    height: 850px;
+  }
 
-    .contenidoFinal {
-        height: 850px;
-    }
+  .contacto {
+    left: 20%;
+    margin-top: 520px;
+    text-align: center;
+  }
+
+  .sobreSevenToys {
+    margin-top: 250px;
+    left: 20%;
+    text-align: center;
+  }
 }
-
 @media only screen and (max-width: 506px) {
+  .coches,
+.figuras {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 380px);
+  }
 
-    .coches,
-    .figuras {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 380px);
+  .redes {
+    flex-wrap: wrap;
+    /*border: solid green 2px;*/
+  }
 
-    }
+  .coches img,
+.figuras img {
+    width: 330px;
+    height: 270px;
+  }
 
-    .redes {
-        flex-wrap: wrap;
-        /*border: solid green 2px;*/
-    }
-
-    .coches img,
-    .figuras img {
-        width: 330px;
-        height: 270px;
-    }
-
-    .textoImagen h2 {
-        font-size: 25px;
-    }
-
-
+  .textoImagen h2 {
+    font-size: 25px;
+  }
 }
+
+/*# sourceMappingURL=estilos.css.map */

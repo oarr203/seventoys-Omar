@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
+
+$colorprincipal:rgb(204, 17, 17);
+$colorsecundario:black;
+$colorfuente:white;
+$anchoproducto1:300px;
+$widthpromociones:260px;
+$heightpromociones:220px;
+$widthcoches:320px;
+$heightcoches:260px;
+$sizeredes:50px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+.navbar {
+    background-image: linear-gradient($colorsecundario, $colorprincipal 50%);
+
+    .logobs {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .logobs {
+        animation: rotation 7s infinite linear;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotatey(0deg);
+        }
+
+        to {
+            transform: rotatey(360deg);
+        }
+    }
+
+    .narvarcolapsebs {
+        justify-content: right;
+        font-weight: bold;
+    }
+}
+
+
+.portadas {
+    /*border: solid 2px green;*/
+    background-color: $colorsecundario;
+
+    img {
+        width: 74%;
+        margin-left: 13%;
+        height: 20%;
+    }
+
+
+}
+
+.indicadores {
+    li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $colorprincipal;
+    }
+}
+
+.portadas {
+
+    p {
+        color: $colorprincipal;
+    }
+
+    h3 {
+        color: $colorprincipal;
+    }
+}
+
+
+.tablas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    /* border: solid 2px black;*/
+    padding-top: 3px;
+    margin-top: 30px;
+
+    .producto1 {
+        width: $anchoproducto1;
+        /*border: solid blue 2px;*/
+        transition: transform .2s;
+
+        .producto {
+            height: $heightpromociones;
+            width: $widthpromociones;
+        }
+    }
+
+    .producto1:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+.itemescala {
+    transition: transform .2s;
+}
+
+.caracteristicasbs {
+    padding: 25px;
+    background-image: linear-gradient($colorsecundario, $colorprincipal 70%, $colorsecundario);
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+
+    h3,
+    p {
+        color: $colorfuente;
+    }
+}
+
+h2 {
+    color: $colorsecundario;
+}
+
+h2::first-letter {
+    color: $colorprincipal;
+    font-size: 120%;
+}
+
+.tablaProductos {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+    .producto1 {
+        width: 300px;
+        /*border: solid red 2px;*/
+        transition: transform .2s;
+
+        .producto {
+            height: $heightpromociones;
+            width: $widthpromociones;
+        }
+
+
+    }
+
+    .producto1:hover,
+    .itemescala:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+.contenidoFinal {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    color: white;
+    background-image: linear-gradient(45deg, $colorprincipal 20%, $colorsecundario);
+
+    .menuInferior {
+        position: absolute;
+        top: 20px;
+        left: 5%;        
+    }
+
+    .mapa {
+        height: 240px;
+        width: 390px;
+        margin: 5px 0 0 5px;
+    }
+
+    .sobreSevenToys {
+        position: absolute;
+        top: 20px;
+        left: 30%;
+        width: 370px;
+    }
+
+    .contacto {
+        position: absolute;
+        top: 20px;
+        right: 0%;
+        width: 320px;
+        height: 200px;
+        /* border: solid green 2px;*/
+
+        .redes {
+            position: absolute;
+            bottom: 0;
+            right: 0%;
+            width: 100%;
+            /*border: solid yellow 2px;*/
+            display: flex;
+            justify-content: space-between;
+
+            .logoRedes {
+                width: $sizeredes;
+                height: $sizeredes;
+                transition: transform .2s;
+            }
+
+            .logoRedes:hover {
+                transform: scale(1.5);
+            }
+
+            a {
+                border: solid $colorfuente 2px;
+                border-radius: 10px;
+                padding: 10px;
+                color: $colorfuente;
+                font-size: 15px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                background-color: rgba(255, 255, 5255, 0.5);
+            }
+        }
+    }
+}
+
+/*autos*/
+
+.seleccion {
+    margin-top: 30px;
+    height: 50px;
+    /*border: solid $colorprincipal;*/
+}
+
+.coches {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 440px 440px 440px 440px;
+    /*border: solid 1px green;*/
+    text-align: center;
+
+    .itemescala {
+        transition: transform .2s;
+    }
+
+    .itemescala:hover {
+        transform: scale(1.2);
+    }
+
+    img {
+        margin-top: 10%;
+        width: $widthcoches;
+        height: $heightcoches;
+    }
+
+    p::after {
+        content: " Pesos Col";
+    }
+}
+
+/*figuras*/
+
+.figurasbs p::after {
+    content: " Pesos Col";
+}
+
+.cardsbs {
+    /*border: solid green 2px;*/
+    padding: 20px;
+
+    .figura1bs {
+        padding: 20px;
+        text-align: center;
+        /*border: solid yellow 2px;*/
+        .card-body {
+            transition: transform .2s;
+
+            .botonbs {
+                background-color: $colorprincipal;
+                border-color: $colorprincipal;
+            }
+
+        }
+
+        .card-body:hover {
+            transform: scale(1.2);
+        }
+
+    }
+}
+
+/*contacto*/
+
+.jumbotron {
+    background-image: url(images/jumbotron.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    font-size: 20px;
+    color: $colorfuente;
+    padding-top: 7%;
+
+    p::after {
+        content: " Manejamos envíos a todo el territorio nacional. Los costos y tiempos de envío dependerán del lugar de destino ya descritos en la pagina";
+    }
+}
+
+.formulario {
+    background-color: $colorsecundario;
+    padding: 10px 40px;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+    left: 22%;
+    width: 50%;
+    height: 810px;
+    color: $colorfuente;
+    margin-bottom: 100px;
+
+    .campo_form {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid $colorprincipal;
+        padding: 10px;
+        color: $colorfuente;
+    }
+
+    .notificacion {
+        color: white;
+        background-color: $colorprincipal;
+        width: 100%;
+        height: 35px;
+        border: none;
+        padding: 5px;
+        margin-top: 20px;
+        font-size: 20px;
+        transition: height 1s;
+    }
+
+    .notificacion:hover {
+        height: 50px;
+    }
+
+    .opcion {
+        color: $colorfuente;
+        background-color: $colorsecundario;
+    }
+
+}
+
+/*preguntas*/
+
+.preguntas {
+    margin-top: 50px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17,0.5)), url(../images/fondo.jpg);
+    height: 500px;
+
+        h2 {
+        text-align: center;
+            }
+
+        h4 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+            }
+
+        h4::first-letter {
+        color: $colorprincipal;
+            }
+
+        .pregunta1 {
+        height: 40px;
+        overflow: hidden;
+        margin-top: 20px;
+        cursor: pointer;
+
+            .respuesta {
+            background-color: $colorfuente;
+            }
+        }
+
+         .pregunta1:hover {
+        height: auto;
+        overflow: visible;
+        }
+}
+
+@media only screen and (max-width: 1215px) {
+    .inicio {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .navegacion {
+        grid-column: 2/3;
+    }
+
+    /*.tablas{
+        background-color: blueviolet;
+    }*/
+
+}
+
+@media only screen and (max-width: 983px) {
+    .contenidoFinal {
+        height: 770px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .menuInferior {
+        left:0;
+        width: 90%;
+        /*border: solid green 2px;*/
+        text-align: center;
+        position: absolute;
+        
+    }
+
+    .menuInferior li {
+        list-style-type: none;
+    }
+
+    .sobreSevenToys {
+        margin-top: 250px;
+        text-align: center;
+    }
+
+    .contacto {
+        left: 33%;
+        margin-top: 520px;
+        text-align: center;
+    }
+
+    .redes {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .coches img,
+    .figuras img {
+        height: 200px;
+        width: 240px;
+    }
+
+    .coches,
+    .figuras {
+        grid-template-rows: 340px 340px 340px 340px;
+    }
+    .itemescala{
+    
+        border: solid 2px red;
+    }
+}
+
+
+
+@media only screen and (max-width: 742px) {
+
+    .coches,
+    .figuras {
+        /*background-color: blueviolet;*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coches img,
+    .figuras img {
+        height: 190px;
+        width: 250px;
+    }
+
+    .textoImagen {
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .navegacion2 {
+        display: none;
+    }
+
+    .menu2 {
+        /*transform: translateX(0);*/
+        display: inline;
+    }
+   
+}
+
+@media only screen and (max-width: 607px) {
+    .caracteristicas {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 330px;
+    }
+
+    .seguridad {
+        grid-row: 1/2;
+    }
+
+    .envios {
+        grid-row: 3/4;
+    }
+
+    .garantia {
+        grid-row: 5/6;
+    }
+
+    .contamos {
+        grid-row: 2/3;
+    }
+
+    .ofrecemos {
+        grid-row: 4/5;
+    }
+
+    .todos {
+        grid-row: 6/7;
+    }
+
+    .promociones {
+        text-align: center;
+        /* border: solid greenyellow 2px;*/
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .caracteristicas {
+        height: 500px;
+    }
+
+    .contenidoFinal {
+        height: 850px;
+    }
+    .contacto {
+        left: 20%;
+        margin-top: 520px;
+        text-align: center;
+    }
+    .sobreSevenToys {
+        margin-top: 250px;
+        left: 20%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 506px) {
+
+    .coches,
+    .figuras {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 380px);
+    }
+
+    .redes {
+        flex-wrap: wrap;
+        /*border: solid green 2px;*/
+    }
+
+    .coches img,
+    .figuras img {
+        width: 330px;
+        height: 270px;
+    }
+
+    .textoImagen h2 {
+        font-size: 25px;
+    }
+}
