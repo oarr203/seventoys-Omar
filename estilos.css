@@ -71,8 +71,8 @@ body {
   transition: transform 0.2s;
 }
 .tablas .producto1 .producto {
-  height: 220px;
   width: 260px;
+  height: 220px;
 }
 .tablas .producto1:hover {
   transform: scale(1.2);
@@ -124,8 +124,8 @@ h2::first-letter {
   transition: transform 0.2s;
 }
 .tablaProductos .producto1 .producto {
-  height: 220px;
   width: 260px;
+  height: 220px;
 }
 .tablaProductos .producto1:hover,
 .tablaProductos .itemescala:hover {
@@ -229,9 +229,9 @@ h2::first-letter {
   transform: scale(1.2);
 }
 .coches img {
-  margin-top: 10%;
   width: 320px;
   height: 260px;
+  margin-top: 10%;
 }
 .coches p::after {
   content: " Pesos Col";

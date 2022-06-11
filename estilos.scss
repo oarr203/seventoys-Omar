@@ -5,11 +5,18 @@ $colorprincipal:rgb(204, 17, 17);
 $colorsecundario:black;
 $colorfuente:white;
 $anchoproducto1:300px;
-$widthpromociones:260px;
-$heightpromociones:220px;
-$widthcoches:320px;
-$heightcoches:260px;
+
+
 $sizeredes:50px;
+@mixin dimensioncohes {
+    width:320px;
+    height:260px;
+}
+@mixin dimensionpromociones {
+    width:260px;
+    height:220px;
+}
+
 
 
 * {
@@ -96,8 +103,8 @@ body {
         transition: transform .2s;
 
         .producto {
-            height: $heightpromociones;
-            width: $widthpromociones;
+            @include dimensionpromociones;
+            
         }
     }
 
@@ -152,8 +159,7 @@ h2::first-letter {
         transition: transform .2s;
 
         .producto {
-            height: $heightpromociones;
-            width: $widthpromociones;
+            @include dimensionpromociones;    
         }
 
 
@@ -278,9 +284,9 @@ h2::first-letter {
     }
 
     img {
+        @include dimensioncohes;
         margin-top: 10%;
-        width: $widthcoches;
-        height: $heightcoches;
+
     }
 
     p::after {
