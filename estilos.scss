@@ -52,7 +52,6 @@ body {
 
 
 .portadas {
-    /*border: solid 2px green;*/
     background-color: $colorsecundario;
 
     img {
@@ -60,8 +59,6 @@ body {
         margin-left: 13%;
         height: 20%;
     }
-
-
 }
 
 .indicadores {
@@ -91,13 +88,11 @@ body {
     justify-content: space-around;
     width: 100%;
     text-align: center;
-    /* border: solid 2px black;*/
     padding-top: 3px;
     margin-top: 30px;
 
     .producto1 {
         width: $anchoproducto1;
-        /*border: solid blue 2px;*/
         transition: transform .2s;
 
         .producto {
@@ -128,9 +123,16 @@ body {
         color: $colorfuente;
     }
 }
+h1 {
+    color: $colorsecundario;
+}
 
 h2 {
     color: $colorsecundario;
+}
+h1::first-letter {
+    color: $colorprincipal;
+    font-size: 120%;
 }
 
 h2::first-letter {
@@ -147,7 +149,6 @@ h2::first-letter {
 
     .producto1 {
         width: 300px;
-        /*border: solid red 2px;*/
         transition: transform .2s;
 
         .producto {
@@ -198,14 +199,12 @@ h2::first-letter {
         right: 0%;
         width: 320px;
         height: 200px;
-        /* border: solid green 2px;*/
 
         .redes {
             position: absolute;
             bottom: 0;
             right: 0%;
             width: 100%;
-            /*border: solid yellow 2px;*/
             display: flex;
             justify-content: space-between;
 
@@ -219,7 +218,7 @@ h2::first-letter {
                 transform: scale(1.5);
             }
 
-            a {
+            .volver {
                 border: solid $colorfuente 2px;
                 border-radius: 10px;
                 padding: 10px;
@@ -231,6 +230,28 @@ h2::first-letter {
             a:hover {
                 background-color: rgba(255, 255, 5255, 0.5);
             }
+            .whatsapp{
+                position: fixed;
+                text-align: center;
+                color: $colorprincipal;
+                font-weight: bold;
+                font-size: 20px;
+                top: 250px;
+                right: 20px;
+                z-index: 10;
+               .conta{
+                padding: 7px;
+                margin-left: 0;
+                height: 0;
+                overflow: hidden;
+               }
+            }
+            .whatsapp:hover{
+                .conta{
+                    height: auto;
+                }
+            }
+           
         }
     }
 }
@@ -240,14 +261,12 @@ h2::first-letter {
 .seleccion {
     margin-top: 30px;
     height: 50px;
-    /*border: solid $colorprincipal;*/
 }
 
 .coches {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 440px 440px 440px 440px;
-    /*border: solid 1px green;*/
     text-align: center;
 
     .itemescala {
@@ -276,13 +295,11 @@ h2::first-letter {
 }
 
 .cardsbs {
-    /*border: solid green 2px;*/
     padding: 20px;
 
     .figura1bs {
         padding: 20px;
         text-align: center;
-        /*border: solid yellow 2px;*/
         .card-body {
             transition: transform .2s;
 
@@ -303,7 +320,7 @@ h2::first-letter {
 /*contacto*/
 
 .jumbotron {
-    background-image: url(images/jumbotron.jpg);
+    background-image: url(images/imagenes/jumbotron.jpg);
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -365,7 +382,7 @@ h2::first-letter {
 
 .preguntas {
     margin-top: 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17,0.5)), url(../images/fondo.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17,0.5)), url(../images/imagenes/fondo.jpg);
     height: 500px;
 
         h2 {
@@ -406,11 +423,6 @@ h2::first-letter {
     .navegacion {
         grid-column: 2/3;
     }
-
-    /*.tablas{
-        background-color: blueviolet;
-    }*/
-
 }
 
 @media only screen and (max-width: 983px) {
@@ -423,7 +435,6 @@ h2::first-letter {
     .menuInferior {
         left:0;
         width: 90%;
-        /*border: solid green 2px;*/
         text-align: center;
         position: absolute;
         
@@ -460,10 +471,6 @@ h2::first-letter {
     .figuras {
         grid-template-rows: 340px 340px 340px 340px;
     }
-    .itemescala{
-    
-        border: solid 2px red;
-    }
 }
 
 
@@ -472,7 +479,6 @@ h2::first-letter {
 
     .coches,
     .figuras {
-        /*background-color: blueviolet;*/
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -493,7 +499,6 @@ h2::first-letter {
     }
 
     .menu2 {
-        /*transform: translateX(0);*/
         display: inline;
     }
    
@@ -532,7 +537,6 @@ h2::first-letter {
 
     .promociones {
         text-align: center;
-        /* border: solid greenyellow 2px;*/
     }
 }
 
@@ -566,7 +570,6 @@ h2::first-letter {
 
     .redes {
         flex-wrap: wrap;
-        /*border: solid green 2px;*/
     }
 
     .coches img,
