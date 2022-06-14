@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ms+Madi&display=swap');
 
-$colorprincipal:rgb(204, 17, 17);
-$colorsecundario:black;
-$colorfuente:white;
-$anchoproducto1:300px;
-
+$mapa:(colorprincipal:rgb(204, 17, 17),
+    colorsecundario:black,
+    colorfuente:white,
+    anchoproducto1:300px);
 
 $sizeredes:50px;
+
 @mixin dimensioncohes {
-    width:320px;
-    height:260px;
+    width: 320px;
+    height: 260px;
 }
+
 @mixin dimensionpromociones {
-    width:260px;
-    height:220px;
+    width: 260px;
+    height: 220px;
 }
-
-
 
 * {
     margin: 0;
@@ -29,7 +28,7 @@ body {
 }
 
 .navbar {
-    background-image: linear-gradient($colorsecundario, $colorprincipal 50%);
+    background-image: linear-gradient(map-get($mapa, colorsecundario), map-get($mapa, colorprincipal) 50%);
 
     .logobs {
         width: 70px;
@@ -59,7 +58,7 @@ body {
 
 
 .portadas {
-    background-color: $colorsecundario;
+    background-color: map-get($mapa, colorsecundario);
 
     img {
         width: 74%;
@@ -73,18 +72,18 @@ body {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: $colorprincipal;
+        background-color: map-get($mapa, colorprincipal);
     }
 }
 
 .portadas {
 
     p {
-        color: $colorprincipal;
+        color: map-get($mapa, colorprincipal);
     }
 
     h3 {
-        color: $colorprincipal;
+        color: map-get($mapa, colorprincipal);
     }
 }
 
@@ -99,12 +98,12 @@ body {
     margin-top: 30px;
 
     .producto1 {
-        width: $anchoproducto1;
+        width: map-get($mapa, anchoproducto1);
         transition: transform .2s;
 
         .producto {
             @include dimensionpromociones;
-            
+
         }
     }
 
@@ -120,30 +119,32 @@ body {
 
 .caracteristicasbs {
     padding: 25px;
-    background-image: linear-gradient($colorsecundario, $colorprincipal 70%, $colorsecundario);
+    background-image: linear-gradient(map-get($mapa, colorsecundario), map-get($mapa, colorprincipal) 70%, map-get($mapa, colorsecundario));
     display: flex;
     text-align: center;
     margin-bottom: 30px;
 
     h3,
     p {
-        color: $colorfuente;
+        color: map-get($mapa, colorfuente);
     }
 }
+
 h1 {
-    color: $colorsecundario;
+    color: map-get($mapa, colorsecundario);
 }
 
 h2 {
-    color: $colorsecundario;
+    color: map-get($mapa, colorsecundario);
 }
+
 h1::first-letter {
-    color: $colorprincipal;
+    color: map-get($mapa, colorprincipal);
     font-size: 120%;
 }
 
 h2::first-letter {
-    color: $colorprincipal;
+    color: map-get($mapa, colorprincipal);
     font-size: 120%;
 }
 
@@ -159,7 +160,7 @@ h2::first-letter {
         transition: transform .2s;
 
         .producto {
-            @include dimensionpromociones;    
+            @include dimensionpromociones;
         }
 
 
@@ -178,12 +179,12 @@ h2::first-letter {
     width: 100%;
     height: 250px;
     color: white;
-    background-image: linear-gradient(45deg, $colorprincipal 20%, $colorsecundario);
+    background-image: linear-gradient(45deg, map-get($mapa, colorprincipal) 20%, map-get($mapa, colorsecundario));
 
     .menuInferior {
         position: absolute;
         top: 20px;
-        left: 5%;        
+        left: 5%;
     }
 
     .mapa {
@@ -225,10 +226,10 @@ h2::first-letter {
             }
 
             .volver {
-                border: solid $colorfuente 2px;
+                border: solid map-get($mapa, colorfuente) 2px;
                 border-radius: 10px;
                 padding: 10px;
-                color: $colorfuente;
+                color: map-get($mapa, colorfuente);
                 font-size: 15px;
                 text-decoration: none;
             }
@@ -236,28 +237,31 @@ h2::first-letter {
             a:hover {
                 background-color: rgba(255, 255, 5255, 0.5);
             }
-            .whatsapp{
+
+            .whatsapp {
                 position: fixed;
                 text-align: center;
-                color: $colorprincipal;
+                color: map-get($mapa, colorprincipal);
                 font-weight: bold;
                 font-size: 20px;
                 top: 250px;
                 right: 20px;
                 z-index: 10;
-               .conta{
-                padding: 7px;
-                margin-left: 0;
-                height: 0;
-                overflow: hidden;
-               }
+
+                .conta {
+                    padding: 7px;
+                    margin-left: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
             }
-            .whatsapp:hover{
-                .conta{
+
+            .whatsapp:hover {
+                .conta {
                     height: auto;
                 }
             }
-           
+
         }
     }
 }
@@ -306,12 +310,13 @@ h2::first-letter {
     .figura1bs {
         padding: 20px;
         text-align: center;
+
         .card-body {
             transition: transform .2s;
 
             .botonbs {
-                background-color: $colorprincipal;
-                border-color: $colorprincipal;
+                background-color: map-get($mapa, colorprincipal);
+                border-color: map-get($mapa, colorprincipal);
             }
 
         }
@@ -331,7 +336,7 @@ h2::first-letter {
     background-position: center;
     height: 400px;
     font-size: 20px;
-    color: $colorfuente;
+    color: map-get($mapa, colorfuente);
     padding-top: 7%;
 
     p::after {
@@ -340,7 +345,7 @@ h2::first-letter {
 }
 
 .formulario {
-    background-color: $colorsecundario;
+    background-color: map-get($mapa, colorsecundario);
     padding: 10px 40px;
     border-radius: 5px;
     position: relative;
@@ -348,7 +353,7 @@ h2::first-letter {
     left: 22%;
     width: 50%;
     height: 810px;
-    color: $colorfuente;
+    color: map-get($mapa, colorfuente);
     margin-bottom: 100px;
 
     .campo_form {
@@ -356,14 +361,14 @@ h2::first-letter {
         border: none;
         outline: none;
         background: none;
-        border-bottom: 1px solid $colorprincipal;
+        border-bottom: 1px solid map-get($mapa, colorprincipal);
         padding: 10px;
-        color: $colorfuente;
+        color: map-get($mapa, colorfuente);
     }
 
     .notificacion {
         color: white;
-        background-color: $colorprincipal;
+        background-color: map-get($mapa, colorprincipal);
         width: 100%;
         height: 35px;
         border: none;
@@ -378,8 +383,8 @@ h2::first-letter {
     }
 
     .opcion {
-        color: $colorfuente;
-        background-color: $colorsecundario;
+        color: map-get($mapa, colorfuente);
+        background-color: map-get($mapa, colorsecundario);
     }
 
 }
@@ -388,37 +393,37 @@ h2::first-letter {
 
 .preguntas {
     margin-top: 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17,0.5)), url(../images/imagenes/fondo.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17, 0.5)), url(../images/imagenes/fondo.jpg);
     height: 500px;
 
-        h2 {
+    h2 {
         text-align: center;
-            }
+    }
 
-        h4 {
+    h4 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 30px;
-            }
+    }
 
-        h4::first-letter {
-        color: $colorprincipal;
-            }
+    h4::first-letter {
+        color: map-get($mapa, colorprincipal);
+    }
 
-        .pregunta1 {
+    .pregunta1 {
         height: 40px;
         overflow: hidden;
         margin-top: 20px;
         cursor: pointer;
 
-            .respuesta {
-            background-color: $colorfuente;
-            }
+        .respuesta {
+            background-color: map-get($mapa, colorfuente);
         }
+    }
 
-         .pregunta1:hover {
+    .pregunta1:hover {
         height: auto;
         overflow: visible;
-        }
+    }
 }
 
 @media only screen and (max-width: 1215px) {
@@ -439,11 +444,11 @@ h2::first-letter {
     }
 
     .menuInferior {
-        left:0;
+        left: 0;
         width: 90%;
         text-align: center;
         position: absolute;
-        
+
     }
 
     .menuInferior li {
@@ -507,7 +512,7 @@ h2::first-letter {
     .menu2 {
         display: inline;
     }
-   
+
 }
 
 @media only screen and (max-width: 607px) {
@@ -554,11 +559,13 @@ h2::first-letter {
     .contenidoFinal {
         height: 850px;
     }
+
     .contacto {
         left: 20%;
         margin-top: 520px;
         text-align: center;
     }
+
     .sobreSevenToys {
         margin-top: 250px;
         left: 20%;
