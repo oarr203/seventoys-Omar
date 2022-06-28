@@ -24,7 +24,17 @@ $sizeredes:50px;
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Kanit', sans-serif;   
+}
+body::-webkit-scrollbar{
+    width:15px;
+}
+body::-webkit-scrollbar-thumb{
+    background:map-get($mapa, colorprincipal);
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(map-get($mapa, colorsecundario), map-get($mapa, colorprincipal) 70%, map-get($mapa, colorsecundario));
 }
 
 .navbar {
@@ -49,13 +59,11 @@ body {
             transform: rotatey(360deg);
         }
     }
-
     .narvarcolapsebs {
         justify-content: right;
         font-weight: bold;
     }
 }
-
 
 .portadas {
     background-color: map-get($mapa, colorsecundario);
@@ -87,7 +95,6 @@ body {
     }
 }
 
-
 .tablas {
     display: flex;
     flex-wrap: wrap;
@@ -96,11 +103,13 @@ body {
     text-align: center;
     padding-top: 3px;
     margin-top: 30px;
+    padding: 15px;
 
     .producto1 {
         width: map-get($mapa, anchoproducto1);
         transition: transform .2s;
-
+        margin-bottom: 40px;
+        
         .producto {
             @include dimensionpromociones;
 
@@ -110,7 +119,6 @@ body {
     .producto1:hover {
         transform: scale(1.2);
     }
-
 }
 
 .itemescala {
@@ -124,8 +132,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
 
-    h3,
-    p {
+    h3,p {
         color: map-get($mapa, colorfuente);
     }
 }
@@ -154,16 +161,16 @@ h2::first-letter {
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    padding: 15px;
 
     .producto1 {
         width: 300px;
         transition: transform .2s;
+        margin-bottom: 40px;
 
         .producto {
             @include dimensionpromociones;
         }
-
-
     }
 
     .producto1:hover,
@@ -174,51 +181,45 @@ h2::first-letter {
 }
 
 .contenidoFinal {
-    margin-top: 40px;
-    position: relative;
     width: 100%;
-    height: 250px;
-    color: white;
+    color:map-get($mapa, colorfuente);
     background-image: linear-gradient(45deg, map-get($mapa, colorprincipal) 20%, map-get($mapa, colorsecundario));
 
     .menuInferior {
-        position: absolute;
-        top: 20px;
-        left: 5%;
+       padding: 40px 0px 0px 40px;
+
+        a{
+            color:map-get($mapa, colorfuente);
+        }
     }
 
     .mapa {
-        height: 240px;
-        width: 390px;
-        margin: 5px 0 0 5px;
+        padding: 4px;   
     }
 
     .sobreSevenToys {
-        position: absolute;
-        top: 20px;
-        left: 30%;
-        width: 370px;
+        padding: 40px 10px;
+        text-align: center;
     }
 
     .contacto {
-        position: absolute;
-        top: 20px;
-        right: 0%;
-        width: 320px;
+        padding: 20px 10px 0px 10px;
         height: 200px;
+        text-align: center;
 
         .redes {
-            position: absolute;
             bottom: 0;
             right: 0%;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
             .logoRedes {
                 width: $sizeredes;
                 height: $sizeredes;
-                transition: transform .2s;
+                transition: transform .3s;
+                margin-top: 10px;
             }
 
             .logoRedes:hover {
@@ -232,6 +233,7 @@ h2::first-letter {
                 color: map-get($mapa, colorfuente);
                 font-size: 15px;
                 text-decoration: none;
+                margin-top: 10px;
             }
 
             a:hover {
@@ -247,13 +249,6 @@ h2::first-letter {
                 top: 250px;
                 right: 20px;
                 z-index: 10;
-
-                .conta {
-                    padding: 7px;
-                    margin-left: 0;
-                    height: 0;
-                    overflow: hidden;
-                }
             }
 
             .whatsapp:hover {
@@ -276,8 +271,9 @@ h2::first-letter {
 .coches {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 440px 440px 440px 440px;
+    grid-template-rows: 440px 440px 440px 470px;
     text-align: center;
+    overflow: hidden;
 
     .itemescala {
         transition: transform .2s;
@@ -318,13 +314,11 @@ h2::first-letter {
                 background-color: map-get($mapa, colorprincipal);
                 border-color: map-get($mapa, colorprincipal);
             }
-
         }
 
         .card-body:hover {
             transform: scale(1.2);
         }
-
     }
 }
 
@@ -348,13 +342,13 @@ h2::first-letter {
     background-color: map-get($mapa, colorsecundario);
     padding: 10px 40px;
     border-radius: 5px;
-    position: relative;
+    /*position: relative;
     top: 20px;
-    left: 22%;
-    width: 50%;
+    left: 20%;*/
+    margin: 50px auto;
+    width: 60%;
     height: 810px;
     color: map-get($mapa, colorfuente);
-    margin-bottom: 100px;
 
     .campo_form {
         width: 100%;
@@ -394,7 +388,7 @@ h2::first-letter {
 .preguntas {
     margin-top: 50px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17, 0.5)), url(../images/imagenes/fondo.jpg);
-    height: 500px;
+    height: 520px;
 
     h2 {
         text-align: center;
@@ -437,40 +431,6 @@ h2::first-letter {
 }
 
 @media only screen and (max-width: 983px) {
-    .contenidoFinal {
-        height: 770px;
-        font-size: 20px;
-        width: 100%;
-    }
-
-    .menuInferior {
-        left: 0;
-        width: 90%;
-        text-align: center;
-        position: absolute;
-
-    }
-
-    .menuInferior li {
-        list-style-type: none;
-    }
-
-    .sobreSevenToys {
-        margin-top: 250px;
-        text-align: center;
-    }
-
-    .contacto {
-        left: 33%;
-        margin-top: 520px;
-        text-align: center;
-    }
-
-    .redes {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-    }
 
     .coches img,
     .figuras img {
@@ -478,15 +438,29 @@ h2::first-letter {
         width: 240px;
     }
 
-    .coches,
-    .figuras {
-        grid-template-rows: 340px 340px 340px 340px;
+    .coches{
+        grid-template-rows: 350px 350px 350px 370px;
+    }
+
+    .formulario{
+        width: 90%;
+    }  
+}
+@media only screen and (max-width: 770px) {
+    .menuInferior{
+        text-align: center;
+        li{
+            list-style: none;  
+        }
     }
 }
 
 
-
 @media only screen and (max-width: 742px) {
+
+    .coches{
+        grid-template-rows: 350px 350px 350px 350px 350px 380px;
+    }
 
     .coches,
     .figuras {
@@ -512,64 +486,11 @@ h2::first-letter {
     .menu2 {
         display: inline;
     }
-
-}
-
-@media only screen and (max-width: 607px) {
-    .caracteristicas {
-        display: grid;
-        grid-template-columns: 1fr;
-        height: 330px;
-    }
-
-    .seguridad {
-        grid-row: 1/2;
-    }
-
-    .envios {
-        grid-row: 3/4;
-    }
-
-    .garantia {
-        grid-row: 5/6;
-    }
-
-    .contamos {
-        grid-row: 2/3;
-    }
-
-    .ofrecemos {
-        grid-row: 4/5;
-    }
-
-    .todos {
-        grid-row: 6/7;
-    }
-
-    .promociones {
-        text-align: center;
-    }
 }
 
 @media only screen and (max-width: 580px) {
     .caracteristicas {
         height: 500px;
-    }
-
-    .contenidoFinal {
-        height: 850px;
-    }
-
-    .contacto {
-        left: 20%;
-        margin-top: 520px;
-        text-align: center;
-    }
-
-    .sobreSevenToys {
-        margin-top: 250px;
-        left: 20%;
-        text-align: center;
     }
 }
 
@@ -578,7 +499,7 @@ h2::first-letter {
     .coches,
     .figuras {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 380px);
+        grid-template-rows: repeat(12, 470px);
     }
 
     .redes {
