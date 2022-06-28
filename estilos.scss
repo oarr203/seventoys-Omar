@@ -24,17 +24,20 @@ $sizeredes:50px;
 }
 
 body {
-    font-family: 'Kanit', sans-serif;   
+    font-family: 'Kanit', sans-serif;
 }
-body::-webkit-scrollbar{
-    width:15px;
+
+body::-webkit-scrollbar {
+    width: 15px;
 }
-body::-webkit-scrollbar-thumb{
-    background:map-get($mapa, colorprincipal);
+
+body::-webkit-scrollbar-thumb {
+    background: map-get($mapa, colorprincipal);
     border-radius: 50px;
 }
-body::-webkit-scrollbar-thumb:hover{
-    background:linear-gradient(map-get($mapa, colorsecundario), map-get($mapa, colorprincipal) 70%, map-get($mapa, colorsecundario));
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(map-get($mapa, colorsecundario), map-get($mapa, colorprincipal) 70%, map-get($mapa, colorsecundario));
 }
 
 .navbar {
@@ -59,6 +62,7 @@ body::-webkit-scrollbar-thumb:hover{
             transform: rotatey(360deg);
         }
     }
+
     .narvarcolapsebs {
         justify-content: right;
         font-weight: bold;
@@ -109,7 +113,7 @@ body::-webkit-scrollbar-thumb:hover{
         width: map-get($mapa, anchoproducto1);
         transition: transform .2s;
         margin-bottom: 40px;
-        
+
         .producto {
             @include dimensionpromociones;
 
@@ -132,7 +136,8 @@ body::-webkit-scrollbar-thumb:hover{
     text-align: center;
     margin-bottom: 30px;
 
-    h3,p {
+    h3,
+    p {
         color: map-get($mapa, colorfuente);
     }
 }
@@ -177,24 +182,23 @@ h2::first-letter {
     .itemescala:hover {
         transform: scale(1.2);
     }
-
 }
 
 .contenidoFinal {
     width: 100%;
-    color:map-get($mapa, colorfuente);
+    color: map-get($mapa, colorfuente);
     background-image: linear-gradient(45deg, map-get($mapa, colorprincipal) 20%, map-get($mapa, colorsecundario));
 
     .menuInferior {
-       padding: 40px 0px 0px 40px;
+        padding: 40px 0px 0px 40px;
 
-        a{
-            color:map-get($mapa, colorfuente);
+        a {
+            color: map-get($mapa, colorfuente);
         }
     }
 
     .mapa {
-        padding: 4px;   
+        padding: 4px;
     }
 
     .sobreSevenToys {
@@ -342,9 +346,6 @@ h2::first-letter {
     background-color: map-get($mapa, colorsecundario);
     padding: 10px 40px;
     border-radius: 5px;
-    /*position: relative;
-    top: 20px;
-    left: 20%;*/
     margin: 50px auto;
     width: 60%;
     height: 810px;
@@ -438,19 +439,21 @@ h2::first-letter {
         width: 240px;
     }
 
-    .coches{
+    .coches {
         grid-template-rows: 350px 350px 350px 370px;
     }
 
-    .formulario{
+    .formulario {
         width: 90%;
-    }  
+    }
 }
+
 @media only screen and (max-width: 770px) {
-    .menuInferior{
+    .menuInferior {
         text-align: center;
-        li{
-            list-style: none;  
+
+        li {
+            list-style: none;
         }
     }
 }
@@ -458,7 +461,7 @@ h2::first-letter {
 
 @media only screen and (max-width: 742px) {
 
-    .coches{
+    .coches {
         grid-template-rows: 350px 350px 350px 350px 350px 380px;
     }
 
