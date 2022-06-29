@@ -388,16 +388,12 @@ h2::first-letter {
 
 .preguntas {
     margin-top: 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17, 0.5)), url(../images/imagenes/fondo.jpg);
-    height: 520px;
-
-    h2 {
-        text-align: center;
-    }
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgb(204, 17, 17, 0.5)),url(../images/imagenes/fondo.jpg);
+    height: 540px;
 
     h4 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 30px;
+        font-size: 28px;
     }
 
     h4::first-letter {
